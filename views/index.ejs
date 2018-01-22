@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  Ben</title>
+
+    <style type="text/css">
+        body {
+            background-color: #DADADA;
+        }
+        body > .grid {
+            height: 100%;
+        }
+        .image {
+            margin-top: -100px;
+        }
+        .column {
+            max-width: 450px;
+        }
+    </style>
+    <script src="./javascripts/jquery.js"></script>
+    <script src="./usejs/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./javascripts/semantic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./javascripts/semantic.js"></script>
+</head>
+<body>
+
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <h2 class="ui teal image header">
+            <i class="fa fa-check-square-o" style="color: #f2711c" aria-hidden="true"></i>
+            <div class="content" style="color: #f2711c">
+                Login
+            </div>
+        </h2>
+        <form class="ui large form">
+
+            <div class="ui stacked segment">
+
+             <% if(!error){ %>
+
+            <div class="ui negative message" id="errmess" style="display: none">
+              <div class="header">
+              It seems you have entered wrong credentials. Check and try again
+              </div>
+              </div>
+        <% }  %>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="email" id="email" name="Email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" id="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="ui fluid large teal button" style="background-color: #f2711c" id="login">Login</div>
+            </div>
+
+            <div class="ui error message"></div>
+
+        </form>
+
+
+    </div>
+</div>
+
+</body>
+</html>
